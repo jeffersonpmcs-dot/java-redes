@@ -22,7 +22,11 @@ Versione código, testes, `pom.xml`, documentação e dados fictícios. As pasta
 
 ## Contexto e autoria
 
-Os projetos preservam o contexto acadêmico. Antes de publicar, complete os créditos dos autores e colaboradores conforme a participação real. Nenhuma licença foi escolhida automaticamente: a autorização de reutilização deve refletir a vontade dos autores.
+Autoria: [Jefferson Machado (@jeffersonpmcs-dot)](https://github.com/jeffersonpmcs-dot).
+
+Projetos desenvolvidos no contexto acadêmico da disciplina de Redes do 3º período do IFSC. O repositório apresenta os trabalhos e as melhorias posteriores de validação, testes e documentação.
+
+O repositório ainda não possui uma licença de reutilização definida.
 
 ## Testes e integração contínua
 
@@ -30,7 +34,7 @@ Os projetos preservam o contexto acadêmico. Antes de publicar, complete os cré
 mvn clean verify
 ```
 
-O GitHub Actions executa esse comando no Windows e no Linux a cada push e pull request. A execução local foi validada no Windows; a execução no GitHub ocorrerá após publicar o repositório.
+O GitHub Actions executa esse comando no Windows e no Linux a cada push e pull request. A primeira execução na plataforma foi concluída com sucesso nos dois ambientes: [ver execução aprovada](https://github.com/jeffersonpmcs-dot/java-redes/actions/runs/39260077479).
 
 ### Resultado da validação — 19/10/2026
 
@@ -50,15 +54,18 @@ Também foram realizadas verificações locais com comunicação real:
 - **TCP:** upload, listagem, download, hash incorreto, tentativa de acesso fora da pasta permitida, arquivo vazio e comando desconhecido.
 - **UDP:** consulta de estados, alteração de atuador, rejeição de alteração de sensor, 60 consultas simultâneas, JSON inválido e credenciais incorretas.
 
-A validação ocorreu no Windows. Não incluiu multicast entre computadores nem uma sessão manual completa das interfaces. O workflow do GitHub ainda depende da publicação para validar os ambientes Windows e Linux na plataforma.
+Os 10 testes automatizados passaram no Windows e no Linux no GitHub Actions. As verificações adicionais de comunicação TCP e UDP foram realizadas localmente no Windows. A validação não incluiu multicast entre computadores nem uma sessão manual completa das interfaces.
 
-## Publicar no GitHub
+## Repositório publicado
 
-Use esta pasta como raiz do repositório: ela contém o `pom.xml` agregador, este README e os três projetos. Confira os arquivos antes do primeiro commit; `target/`, `server_files/`, `.idea/`, configurações locais e registros de extensões são ignorados pelo Git.
+O projeto está disponível em [jeffersonpmcs-dot/java-redes](https://github.com/jeffersonpmcs-dot/java-redes), na branch `main`.
 
-1. Complete os créditos de autoria conforme a participação real.
-2. Crie ou selecione o repositório de destino no GitHub e configure-o como remoto desta pasta.
-3. Execute `mvn clean verify` e confira os arquivos do commit.
-4. Envie o código e acompanhe o workflow **Testes Java** na aba **Actions** do GitHub.
+Para obter uma cópia e executar os testes:
 
-Até esta validação, esta pasta não tinha repositório Git próprio nem remoto configurado; nenhum commit ou envio foi realizado nesta revisão.
+```text
+git clone https://github.com/jeffersonpmcs-dot/java-redes.git
+cd java-redes
+mvn clean verify
+```
+
+Os comandos para iniciar cada aplicação estão nos READMEs individuais. Novos envios e pull requests executam o workflow **Testes Java**, disponível na aba [Actions](https://github.com/jeffersonpmcs-dot/java-redes/actions).
