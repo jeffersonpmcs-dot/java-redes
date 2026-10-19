@@ -1,0 +1,9 @@
+**/target/
+**/.idea/
+**/server_files/
+**/config.local.json
+*.log
+
+.vscode/
+.github/modernize/
+**/nbproject/private/

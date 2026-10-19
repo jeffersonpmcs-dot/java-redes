@@ -1,0 +1,9 @@
+target/
+.idea/
+*.iml
+nbproject/private/
+.vscode/
+.DS_Store
+server_files/
+config.local.json
+*.log

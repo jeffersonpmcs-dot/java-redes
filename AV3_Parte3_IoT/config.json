@@ -1,0 +1,22 @@
+[
+  {
+    "filial": "Lages",
+    "port": 51000,
+    "admin user": "admin",
+    "admin pass": "demo-only",
+    "id": [
+      "sensor_light_meetroom",
+      "actuator_light_meetroom"
+    ]
+  },
+  {
+    "filial": "Florianopolis",
+    "port": 51001,
+    "admin user": "admin",
+    "admin pass": "demo-only",
+    "id": [
+      "sensor_ac_office",
+      "actuator_ac_office"
+    ]
+  }
+]
